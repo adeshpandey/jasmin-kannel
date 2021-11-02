@@ -1,0 +1,7 @@
+uf uf123 vma *.*.*.*
+smppclient password vma2 *.*.*.*
+smppclient2 password vma3 *.*.*.*
+cam01 cam123 vma01 *.*.*.*
+cam02 cam123 vma02 *.*.*.*
+cam11 cam123 vma11 *.*.*.*
+cam12 cam123 vma12 *.*.*.*

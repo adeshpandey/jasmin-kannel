@@ -1,0 +1,41 @@
+smppccm -a
+submit_throughput 100
+port 3776
+password cam123
+username cam01
+host kannel
+systype vma01
+cid pd_esmes_test_01
+bind transmitter
+ok
+
+smppccm -a
+submit_throughput 100
+port 3776
+password cam123
+username cam02
+host kannel
+systype vma02
+cid pd_esmes_test_02
+bind transmitter
+ok
+
+smppccm -a
+submit_throughput 100
+port 3776
+password cam123
+username cam11
+host kannel
+systype vma11
+cid pd_esmes_test_11
+bind transmitter
+ok
+
+
+mtrouter -a
+type RandomRoundrobinMTRoute
+connectors smppc(pd_esmes_test_01);smppc(pd_esmes_test_02);smppc(pd_esmes_test_11)
+rate 1
+order 1
+filters TF
+ok
